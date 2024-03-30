@@ -35,6 +35,7 @@ $ docker exec -i local /bin/bash -c './vendor/bin/phpstan analyse --memory-limit
 | known_hosts | Secret file     |    Known Host Fingerprint|
 
 <!--- Globalcredentials --->
+![Globalcredentials](https://github.com/ZaforAbdullah/Blog-Application/assets/33929609/1c20d8dc-84ba-418b-bf0d-61c26a64f36a)
 
 -------------------------------------------------------------------------------------
 - How to get known_hosts data
@@ -50,7 +51,7 @@ $ docker exec -i local /bin/bash -c './vendor/bin/phpstan analyse --memory-limit
 > laravel blog web application written in `laravel v.9` by following TDD software deplovment with Jenkins CI/CD pipeline which also inclue deployment to remote server
 
 ## Table of Content
-1. [Admin Panel Shots](#admin-panel-shots)
+1. [Admin Panel](#admin-panel)
 1. [User Types](#user-types)   
 1. [Database](#database)
 1. [Admin Abiliities](#admin-abilities)
@@ -62,9 +63,8 @@ $ docker exec -i local /bin/bash -c './vendor/bin/phpstan analyse --memory-limit
 
 <details open>
 <summary>Admin Panel View</summary>
-
-<!--- 1. Admin --->
-
+    
+![1  Admin](https://github.com/ZaforAbdullah/Blog-Application/assets/33929609/989b3ff6-584b-4e5a-bb0b-36b9aab7b36e)
 </details>
 
 ## User Types
@@ -98,10 +98,13 @@ _we have these user types_
 <h4>Writer View:</h4>
 </summary>
 
-<!--- 2.1 Writer --->
-<!--- 2.2 Writer --->
-<!--- 2.3 Writer --->
-<!--- 2.4 Writer --->
+![2 1 Writer](https://github.com/ZaforAbdullah/Blog-Application/assets/33929609/15b5381d-e2fe-4235-9151-7aa6621aecdf)
+
+![2 2 Writer](https://github.com/ZaforAbdullah/Blog-Application/assets/33929609/24dc97ae-2ab1-4911-a560-4dadb4d7a7dd)
+
+![2 3 Writer](https://github.com/ZaforAbdullah/Blog-Application/assets/33929609/6bd14263-81e6-4916-b7a2-e2ea4d9711c7)
+
+![2 4 Writer](https://github.com/ZaforAbdullah/Blog-Application/assets/33929609/ce82ba9b-a7c3-40aa-950d-f339325490f0)
 
 </details>
 
@@ -117,8 +120,9 @@ _we have these user types_
 <h4>User View:</h4>
 </summary>
 
-<!--- 3.1 User --->
-<!--- 3.2 User --->
+![3 1 User](https://github.com/ZaforAbdullah/Blog-Application/assets/33929609/5e9cf979-21dd-4dfd-87ff-43935bd85058)
+
+![3 2 User](https://github.com/ZaforAbdullah/Blog-Application/assets/33929609/e46cc29e-5b50-4ecc-9150-d5f2dcd2e41e)
 
 </details>
 
@@ -127,6 +131,7 @@ _we have these user types_
 Here is Blog Database Schema
 
 <!--- Database --->
+![Database](https://github.com/ZaforAbdullah/Blog-Application/assets/33929609/1868fd26-084c-496a-aeb7-d1f57dd68a56)
 
 ## TDD
 
