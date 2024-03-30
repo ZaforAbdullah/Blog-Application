@@ -1,0 +1,60 @@
+services:
+  # MySQL Database
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: db_payroll_project
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - net
+    restart: always
+  app:
+    image: ${IMAGE_NAME}
+    container_name: prod
+    volumes:
+      - php:/var/www/html/
+    ports:
+      - "8081:80"
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html
+      - BROADCAST_DRIVER=log
+      - CACHE_DRIVER=file
+      - SESSION_DRIVER=file
+      - QUEUE_DRIVER=sync
+      - DB_CONNECTION=mysql
+      - DB_PORT=3306
+      - DB_DATABASE=db_payroll_project
+      - DB_USERNAME=root
+      - DB_PASSWORD=password
+      - DB_HOST=mysql
+      - APP_ENV=local
+      - APP_KEY=base64:Eexn4B7t5UW+Z/F5/7w6F9s9Gsdqt54lgCc+sIMxUjE=
+      - APP_DEBUG=true
+      - APP_LOG_LEVEL=debug
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+    depends_on:
+      - mysql
+    restart: always
+    networks:
+      - net
+
+networks:
+  net:
+
+volumes:
+  mysql_data:
+  php:

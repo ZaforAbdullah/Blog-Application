@@ -1,0 +1,36 @@
+parameters:
+        ignoreErrors:
+                -
+                        message: "#^Relation 'categories' is not found in App\\\\Models\\\\Post model\\.$#"
+                        count: 1
+                        path: app/Http/Controllers/Guest/PostController.php
+
+                -
+                        message: "#^Relation 'user' is not found in App\\\\Models\\\\Comment model\\.$#"
+                        count: 1
+                        path: app/Http/Controllers/Writer/WriterController.php
+
+                -
+                        message: "#^Method App\\\\Policies\\\\WriterPostPolicy\\:\\:create\\(\\) should return bool\\|Illuminate\\\\Auth\\\\Access\\\\Response but return statement is missing\\.$#"
+                        count: 1
+                        path: app/Policies/WriterPostPolicy.php
+
+                -
+                        message: "#^Method App\\\\Policies\\\\WriterPostPolicy\\:\\:forceDelete\\(\\) should return bool\\|Illuminate\\\\Auth\\\\Access\\\\Response but return statement is missing\\.$#"
+                        count: 1
+                        path: app/Policies/WriterPostPolicy.php
+
+                -
+                        message: "#^Method App\\\\Policies\\\\WriterPostPolicy\\:\\:restore\\(\\) should return bool\\|Illuminate\\\\Auth\\\\Access\\\\Response but return statement is missing\\.$#"
+                        count: 1
+                        path: app/Policies/WriterPostPolicy.php
+
+                -
+                        message: "#^Method App\\\\Policies\\\\WriterPostPolicy\\:\\:viewAny\\(\\) should return bool\\|Illuminate\\\\Auth\\\\Access\\\\Response but return statement is missing\\.$#"
+                        count: 1
+                        path: app/Policies/WriterPostPolicy.php
+
+                -
+                        message: "#^Called 'except' on Laravel collection, but could have been retrieved as a query\\.$#"
+                        count: 1
+                        path: app/Rules/CheckPostSlugUniqueRule.php
