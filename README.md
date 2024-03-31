@@ -23,6 +23,8 @@ $ docker exec -i local /bin/bash -c './vendor/bin/phpstan analyse --memory-limit
 ```
 
 ### 5. Jenkins Pipeline
+##### Check Jenkins folder for how to setup Jenkins for this project, as this pipeline rely on the fact Docker/Docker Compose will available on Jenkins Node. For that DIND (Docker inside Docker) pattern was used with help of `sysbox`.
+
 - Dashboard > Manage Jenkins > Credentials > System > Global credentials (unrestricted)
 
 | Name        | Kind           | Description  |
