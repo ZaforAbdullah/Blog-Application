@@ -5,7 +5,7 @@
     ```
 - Install Sysbox: 
     ```bash
-        sudo apt-get install ./sysbox-ce_0.6.3-0.linux_amd64.deb`
+        sudo apt-get install ./sysbox-ce_0.6.3-0.linux_amd64.deb
     ```
 - Check Sysbox service status: 
     ```bash
@@ -23,7 +23,7 @@
     ```
 - Run Jenkins Docker container with Sysbox: 
     ```bash
-        docker run -d --runtime=sysbox-runc -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins-docker
+        docker run -d --runtime=sysbox-runc -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins-with-compose
     ```
 - Retrieve initial admin password for Jenkins: 
     ```bash
