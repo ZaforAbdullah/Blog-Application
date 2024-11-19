@@ -1,0 +1,38 @@
+{
+    "name": "Laravel Dev Container",
+    "dockerComposeFile": ["../docker-compose.dev.yml"],
+    "service": "app",
+    "workspaceFolder": "/var/www/html",
+    "settings": {
+      "php.validate.executablePath": "/usr/local/bin/php",
+      "php.debug.remote_enable": true,
+      "php.debug.remote_autostart": true
+    },
+    "extensions": [
+      "bmewburn.vscode-intelephense-client",
+      "devsense.composer-php-vscode",
+      "devsense.intelli-php-vscode",
+      "devsense.phptools-vscode",
+      "devsense.profiler-php-vscode",
+      "robberphex.php-debug",
+      "tiansin.php-debug",
+      "xdebug.php-debug",
+      "zobo.php-intellisense"
+    ],
+    "postCreateCommand": "composer install",
+    "remoteEnv": {
+      "APP_ENV": "local",
+      "APP_KEY": "base64:Eexn4B7t5UW+Z/F5/7w6F9s9Gsdqt54lgCc+sIMxUjE=",
+      "APP_DEBUG": "true",
+      "APP_LOG_LEVEL": "debug",
+      "DB_CONNECTION": "mysql",
+      "DB_PORT": "3306",
+      "DB_DATABASE": "db_payroll_project",
+      "DB_USERNAME": "root",
+      "DB_PASSWORD": "password",
+      "DB_HOST": "mysql"
+    },
+    "mounts": [
+      "source=php,target=/var/www/html,type=volume"
+    ]
+  }
