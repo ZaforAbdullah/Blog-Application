@@ -30,6 +30,8 @@ ENV APACHE_DOCUMENT_ROOT /var/www/html/
 # Update the default Apache site configuration
 COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
 
+COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+
 # Create a directory for your Laravel application.
 WORKDIR /var/www/html/
 
